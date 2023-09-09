@@ -1,38 +1,42 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Task
 
-## Getting Started
+Hello Dear,
 
-First, run the development server:
+Task: Building a Responsive Product Card Component with Redux Integration
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+Description:
+Create a reusable React component that displays product information, integrating Redux for state management. This task involves not only implementing the UI but also thinking about the state structure, actions, and how Redux interacts with your component.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Requirements:
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+Component Design:
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+Design a visually appealing product card using CSS (you can use a CSS preprocessor like SASS if you prefer).
+Include product name, price, description, and an image in the card.
+Ensure the design follows modern UI/UX principles and looks good on both desktop and mobile devices.
+Redux Integration:
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+Set up a Redux store to manage the product data (name, price, description, image URL).
+Create Redux actions and reducers to handle fetching and updating the product data.
+Connect your product card component to the Redux store to display and update product information.
+Responsiveness:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Make sure the product card adjusts its layout gracefully on different screen sizes (desktop, tablet, and mobile).
+Use CSS media queries to handle responsiveness.
+Consider how the content flows and scales to maintain a pleasant user experience.
+Props and Reusability:
 
-## Learn More
+Create a React component that takes props for product information (name, price, description, image URL).
+Make the component easily reusable with customizable product data.
 
-To learn more about Next.js, take a look at the following resources:
+Think about potential edge cases and error handling. How will the component handle missing data or invalid inputs?
+Implement loading indicators or error messages when fetching data from Redux.
+Optional Enhancements:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Add animations or transitions to make the card more interactive and engaging.
+Implement a hover effect to display additional product information or options.
+Documentation:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Provide clear and concise documentation on how to use the component, including the expected props and their types.
+Document the Redux store structure, actions, and how the component interacts with Redux.
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
