@@ -1,13 +1,11 @@
 import Link from "next/link";
 import { useSelector, useDispatch } from "react-redux";
 import { changeColor } from "../lib/productSlice";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
+import Image from "next/image";
 export default function App() {
   const store = useSelector((state) => state.product);
-  const [products, setProducts] = useState([]);
-  useEffect(() => {
-    setProducts(store.products);
-  }, []);
+  const products = store.products;
   return (
     <div className="bg-white">
       <div className="bg-gray-900 px-6 py-24 sm:py-32 lg:px-8">
@@ -31,13 +29,15 @@ export default function App() {
         </h2>
 
         <div className="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
-          {products.map((product) => (
-            <Link href={`${product.id}`}>
+          {products?.map((product, idx) => (
+            <Link href={`${product.id}`} key={idx}>
               <div className="group relative">
                 <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80">
-                  <img
-                    src={product.imageSrc}
-                    alt={product.imageAlt}
+                  <Image
+                    fill
+                    style={{ objectFit: "cover" }}
+                    src={product.images[2].imageSrc}
+                    alt={product.images[0].imageAlt}
                     className="h-full w-full object-cover object-center lg:h-full lg:w-full"
                   />
                 </div>
